@@ -18,12 +18,13 @@ switch($uc){
 	case 'gererFrais' :{
 		include("controleurs/c_gererFrais.php");break;
 	}
+
 	case 'etatFrais' :{
 		include("controleurs/c_etatFrais.php");break; 
 	}
-	// Ajout d'une possibilité de modifier les immat pour le DAF
+		// Ajout d'une possibilité de modifier les immat pour le DAF
 	case 'modifierImmat' :{
-		include("controleurs/c_modifierImmat.php");break;
+		include("controleurs/c_modifierImmat.php");break; 
 	}
 }
 include("vues/v_pied.php") ;
