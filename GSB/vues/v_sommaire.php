@@ -21,6 +21,11 @@
  	   <li class="smenu">
               <a href="index.php?uc=connexion&action=deconnexion" title="Se déconnecter">Déconnexion</a>
            </li>
+           <?php  if ( $_SESSION['prenom']="daf" ){ ?>          
+     <li class="smenu">
+             <a href="index.php?uc=connexion&action=modifierimmat" title="Changer une immatriculation"> Changer une immatriculation</a>
+           </li> 
+           <?php } ?>
          </ul>
         
     </div>
