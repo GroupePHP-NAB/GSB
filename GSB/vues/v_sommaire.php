@@ -37,20 +37,21 @@
               <a href="index.php?uc=etatFrais&action=selectionnerMois" title="Consultation de mes fiches de frais">Mes fiches de frais</a>
 
            </li>
+            <?php  if ( $_SESSION['prenom']=="David" and $_SESSION['nom']=="Andre" ){ ?>            
+     <li class="smenu">
+
+             <a href="index.php?uc=modifierImmat&action=modifierimmat" title="Changer une immatriculation"> Changer une immatriculation</a>
+
+           </li> 
+
+           <?php } ?>
 
  	   <li class="smenu">
 
               <a href="index.php?uc=connexion&action=deconnexion" title="Se déconnecter">Déconnexion</a>
 
            </li>           
-           <?php  if ( $_SESSION['prenom']=="David" and $_SESSION['nom']=="Andre" ){ ?>            
-     <li class="smenu">
-
-             <a href="index.php?uc=connexion&action=modifierimmat" title="Changer une immatriculation"> Changer une immatriculation</a>
-
-           </li> 
-
-           <?php } ?>
+          
 
          </ul>
 
