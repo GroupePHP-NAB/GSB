@@ -17,7 +17,7 @@
 
 class PdoGsb{   		
       	private static $serveur='mysql:host=localhost';
-      	private static $bdd='dbname=gsb_frais';   		
+      	private static $bdd='dbname=my_bonnardjeremy';   		
       	private static $user='root' ;    		
       	private static $mdp='root' ;	
 		private static $monPdo;
@@ -54,8 +54,12 @@ class PdoGsb{
  * @return l'id, le nom et le prénom sous la forme d'un tableau associatif 
 */
 	public function getInfosVisiteur($login, $mdp){
-		$req = "select Visiteur.id as id, Visiteur.nom as nom, Visiteur.prenom as prenom from Visiteur 
-		where Visiteur.login='$login' and Visiteur.mdp='$mdp'";
+		$mois = date(Ym);
+		$req = "SELECT Visiteur.id as id, Visiteur.nom as nom, Visiteur.prenom as prenom,AffectationVehicule.immat as immat 
+from Visiteur, AffectationVehicule
+where  Visiteur.id = AffectationVehicule.idVisiteur and 
+        Visiteur.login='$login' and Visiteur.mdp='$mdp'
+ORDER BY AffectationVehicule.mois Desc";
 		$rs = PdoGsb::$monPdo->query($req);
 		$ligne = $rs->fetch();
 		return $ligne;
