@@ -37,7 +37,7 @@
               <a href="index.php?uc=etatFrais&action=selectionnerMois" title="Consultation de mes fiches de frais">Mes fiches de frais</a>
 
            </li>
-            <?php  if ( $_SESSION['prenom']=="David" and $_SESSION['nom']=="Andre" ){ ?>            
+            <?php  if ( $_SESSION['prenom']=="Daffy" and $_SESSION['nom']=="Duck" ){ ?>            
      <li class="smenu">
 
              <a href="index.php?uc=modifierImmat&action=modifierimmat" title="Changer une immatriculation"> Changer une immatriculation</a>
