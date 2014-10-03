@@ -22,7 +22,8 @@
 
 				  Visiteur :<br>
 
-				<?php echo $_SESSION['prenom']."  ".$_SESSION['nom']  ?>
+				<?php echo $_SESSION['prenom']."  ".$_SESSION['nom']."<BR/>" ;
+        echo "immatriculation: <BR/>".$_SESSION['immat']; ?>
 
 			</li>
 
