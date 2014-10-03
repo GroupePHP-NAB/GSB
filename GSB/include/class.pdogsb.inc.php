@@ -297,9 +297,52 @@ ORDER BY AffectationVehicule.mois Desc";
  */
  
 	public function majEtatFicheFrais($idVisiteur,$mois,$etat){
-		$req = "update FicheFrais set idEtat = '$etat', dateModif = now() 
+		$req = "UPDATE FicheFrais set idEtat = '$etat', dateModif = now() 
 		where FicheFrais.idVisiteur ='$idVisiteur' and FicheFrais.mois = '$mois'";
 		PdoGsb::$monPdo->exec($req);
 	}
+
+	/**
+	*Ajout une immatriculation a un visiteur par rapport a un mois
+
+	*Fais par le DAF uniquement
+	* @param $idVisiteur
+	*@param $immat
+	*/
+
+	public function majImmat($idVisiteur,$immat){
+
+		$mois=date(m);
+		$req= "INSERT INTO AffectationVehicule(idVisiteur,mois,immat) VALUES ('$idVisiteur','$mois','$immat')";
+		PdoGsb::$monPdo->exec($req);			
+	}
+
+	/**
+	*Verification d'un couple nom prenom de visiteur et renvoie l'IdVisiteur
+
+	*
+	*@param $nom
+	*@param $prenom
+	*/
+	
+	public function verifExistanceVisiteur($nom,$prenom){
+		$ok=false;
+
+		$req ="SELECT Visiteur.id 
+				FROM Visiteur
+				WHERE Visiteur.nom='$nom' AND Visiteur.prenom ='$prenom'";
+		$res = PdoGsb::$monPdo->query($req);
+		$idValide =$res->fetch();
+		echo $idValide;
+		if (isset($idValide)){ $ok=true;
+			$idVisiteur = $idValide;
+			return $idVisiteur;}
+
+
+
+		return $ok;
+	}
+
 }
+	
 ?>
