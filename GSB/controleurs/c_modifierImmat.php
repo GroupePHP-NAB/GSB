@@ -1,4 +1,4 @@
 <?php
 include("vues/v_sommaire.php");
-echo "Salut!";
+include("vues/v_modifier.php");
 ?>

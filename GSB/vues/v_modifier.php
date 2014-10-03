@@ -1,10 +1,10 @@
 <div id="contenu">
 
-      <h2>Renseigner ma fiche de frais du mois <?php echo $numMois."-".$numAnnee ?></h2>
+      
 
          
 
-      <form method="POST"  action="index.php?uc=gererFrais&action=validerMajFraisForfait">
+      <form method="POST"  action="index.php?uc=modifierImmat&action=validerChangementImmat">
 
       <div class="corpsForm">
 
@@ -12,50 +12,20 @@
 
           <fieldset>
 
-            <legend>Eléments forfaitisés
+            <legend>Immatriculation à changer
 
             </legend>
 
-			<?php
+            <div>
+            	<label> Nom :</label><input  type="text" name="Nom"/><BR/>
 
-				foreach ($lesFraisForfait as $unFrais)
+            	<label> Prénom :</label><input type="text" name="Prenom"/><BR/>
 
-				{
+            	<label> Nouvelle Immatriculation :</label><input type="text" name="Immatriculation"/><BR/>
 
-					$idFrais = $unFrais['idfrais'];
+            </div>
 
-					$libelle = $unFrais['libelle'];
-
-					$quantite = $unFrais['quantite'];
-
-			?>
-
-					<p>
-
-						<label for="idFrais"><?php echo $libelle ?></label>
-
-						<input type="text" id="idFrais" name="lesFrais[<?php echo $idFrais?>]" size="10" maxlength="5" value="<?php echo $quantite?>" >
-
-					</p>
-
-			
-
-			<?php
-
-				}
-
-			?>
-
-			
-
-			
-
-			
-
-			
-
-           
-
+		
           </fieldset>
 
       </div>
