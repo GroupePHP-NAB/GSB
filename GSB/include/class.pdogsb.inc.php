@@ -301,5 +301,14 @@ ORDER BY AffectationVehicule.mois Desc";
 		where FicheFrais.idVisiteur ='$idVisiteur' and FicheFrais.mois = '$mois'";
 		PdoGsb::$monPdo->exec($req);
 	}
+
+	public function majImmat($idVisiteur, $immat){
+
+		$mois=date(m);
+		$req "Insert Into AffectationVehicule VALUES('$idVisiteur','$mois','$immat')";
+		PdoGsb::$monPdo->exec($req);			
+		}
+		
+	}
 }
 ?>
