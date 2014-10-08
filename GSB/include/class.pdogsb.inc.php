@@ -325,22 +325,17 @@ ORDER BY AffectationVehicule.mois Desc";
 	*@param $prenom
 	*/
 	
-	public function verifExistanceVisiteur($nom,$prenom){
-		$ok=false;
+	public function verifExistanceVisiteur($nom,$prenom){	
 
 		$req ="SELECT Visiteur.id 
 				FROM Visiteur
 				WHERE Visiteur.nom='$nom' AND Visiteur.prenom ='$prenom'";
 		$res = PdoGsb::$monPdo->query($req);
 		$idValide =$res->fetch();
-		echo $idValide;
-		if (isset($idValide)){ $ok=true;
-			$idVisiteur = $idValide;
-			return $idVisiteur;}
-
-
-
-		return $ok;
+		if (isset($idValide)){ 
+			$idVisiteur = $idValide[0];
+			return $idVisiteur;
+		}
 	}
 
 }
