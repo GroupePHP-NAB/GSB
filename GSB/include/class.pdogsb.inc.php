@@ -313,8 +313,22 @@ ORDER BY AffectationVehicule.mois Desc";
 	public function majImmat($idVisiteur,$immat){
 
 		$mois=date(m);
-		$req= "INSERT INTO AffectationVehicule(idVisiteur,mois,immat) VALUES ('$idVisiteur','$mois','$immat')";
-		PdoGsb::$monPdo->exec($req);			
+		$reqtest ="SELECT count(*) From AffectationVehicule Where idVisiteur='$idVisiteur' and mois='$mois'";
+		$res = PdoGsb::$monPdo->query($reqtest);
+		$laLigne = $res->fetch();
+		if($laLigne[0]=0){
+			$req= "INSERT INTO AffectationVehicule(idVisiteur,mois,immat) VALUES ('$idVisiteur','$mois','$immat')";
+		PdoGsb::$monPdo->exec($req);
+		echo "Ajout de l'immatriculation ".$immat;			
+		}
+		else{
+			$req= "UPDATE AffectationVehicule set immat ='$immat' where idVisiteur='$idVisiteur' and mois='$mois'";
+		PdoGsb::$monPdo->exec($req);
+		echo "Modification de l'immatriculation pour le mois de ".$mois;
+		}
+			
+
+		
 	}
 
 	/**
@@ -336,8 +350,11 @@ ORDER BY AffectationVehicule.mois Desc";
 			$idVisiteur = $idValide[0];
 			return $idVisiteur;
 		}
+		else{
+			ajouterErreur("Le visisteur n'existe pas");
+		}
 	}
 
 }
-	
+
 ?>
