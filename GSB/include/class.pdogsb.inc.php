@@ -316,15 +316,15 @@ ORDER BY AffectationVehicule.mois Desc";
 		$reqtest ="SELECT count(*) From AffectationVehicule Where idVisiteur='$idVisiteur' and mois='$mois'";
 		$res = PdoGsb::$monPdo->query($reqtest);
 		$laLigne = $res->fetch();
-		if($laLigne[0]=0){
+		if($laLigne[0]==0){
 			$req= "INSERT INTO AffectationVehicule(idVisiteur,mois,immat) VALUES ('$idVisiteur','$mois','$immat')";
-		PdoGsb::$monPdo->exec($req);
-		echo "Ajout de l'immatriculation ".$immat;			
+			PdoGsb::$monPdo->exec($req);
+			echo "Ajout de l'immatriculation ".$immat;			
 		}
 		else{
 			$req= "UPDATE AffectationVehicule set immat ='$immat' where idVisiteur='$idVisiteur' and mois='$mois'";
-		PdoGsb::$monPdo->exec($req);
-		echo "Modification de l'immatriculation pour le mois de ".$mois;
+			PdoGsb::$monPdo->exec($req);
+			echo "Modification de l'immatriculation pour le mois ".$mois;
 		}
 			
 
