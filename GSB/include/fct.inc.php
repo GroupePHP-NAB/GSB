@@ -203,4 +203,5 @@ function nbErreurs(){
 	   return count($_REQUEST['erreurs']);
 	}
 }
+
 ?>
