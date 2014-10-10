@@ -4,7 +4,7 @@
 
          
 
-      <form method="POST"  action="index.php?uc=modifierImmat&action=validerChangementImmat">
+      <form method="POST"  action="index.php?uc=modifierImmat&action=changerImmat">
 
       <div class="corpsForm">
 
@@ -12,7 +12,7 @@
 
           <fieldset>
 
-            <legend>Immatriculation à changer
+            <legend>Choix Visiteur
 
             </legend>
 
@@ -20,9 +20,7 @@
             	<label> Nom :</label><input  type="text" name="Nom"/><BR/>
 
             	<label> Prénom :</label><input type="text" name="Prenom"/><BR/>
-
-            	<label> Nouvelle Immatriculation :</label><input type="text" name="Immatriculation"/><BR/>
-
+            	
             </div>
 
 		
