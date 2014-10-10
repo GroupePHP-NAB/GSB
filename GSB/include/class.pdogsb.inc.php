@@ -17,7 +17,7 @@
 
 class PdoGsb{   		
       	private static $serveur='mysql:host=localhost';
-      	private static $bdd='dbname=my_notinthomas';   		
+      	private static $bdd='dbname=my_bonnardjeremy';   		
       	private static $user='root' ;    		
       	private static $mdp='root' ;	
 		private static $monPdo;
@@ -355,16 +355,17 @@ ORDER BY AffectationVehicule.mois Desc";
 	/**
 	*Recuperer les immatriculation
 
-	*
-	*
+	*@param $idVisiteur
 	*
 	*/
+
 	public function recupererImmat($idVisiteur){
-		$req ="SELECT AffectationVehicule.immat, AffectationVehicule.mois
+		$req ="SELECT AffectationVehicule.immat as immat,AffectationVehicule.mois as mois
 		FROM AffectationVehicule
-		Where AffectationVehicule.idVisiteur='$idVisiteur'";
+		WHERE AffectationVehicule.idVisiteur='$idVisiteur'
+		ORDER BY AffectationVehicule.mois DESC ";
 		$res =PdoGsb::$monPdo->query($req);
-		$tabImmat = $res->fetch();		
+		$tabImmat = $res->fetch();									
 		return $tabImmat;
 	}
 }
