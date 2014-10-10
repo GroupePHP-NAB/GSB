@@ -350,11 +350,23 @@ ORDER BY AffectationVehicule.mois Desc";
 			$idVisiteur = $idValide[0];
 			return $idVisiteur;
 		}
-		else{
-			ajouterErreur("Le visisteur n'existe pas");
-		}
 	}
 
+	/**
+	*Recuperer les immatriculation
+
+	*
+	*
+	*
+	*/
+	public function recupererImmat($idVisiteur){
+		$req ="SELECT AffectationVehicule.immat, AffectationVehicule.mois
+		FROM AffectationVehicule
+		Where AffectationVehicule.idVisiteur='$idVisiteur'";
+		$res =PdoGsb::$monPdo->query($req);
+		$tabImmat = $res->fetch();		
+		return $tabImmat;
+	}
 }
 
 ?>
