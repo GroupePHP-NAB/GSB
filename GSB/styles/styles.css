@@ -2,7 +2,7 @@
 
 body{
 
-  background-color: #77AADD;
+  background-color: #046380;
 
 	background-image: url(imgs/FONDGLOBAL.jpg);
 
@@ -34,7 +34,7 @@ body{
 
 #entete{
 
-  background-color:white(72,198,236);
+  background-color:#EFECCA(72,198,236);
 
 	color : #000000;
 
@@ -74,7 +74,7 @@ body{
 
 	background-color: white;
 
-	color: rgb(0,85,227);
+	color: #787746;
 
 	float: left;
 
@@ -92,7 +92,7 @@ body{
 
 	background-color: white;
 
-	border-left :  groove 0.8em #980101;
+	border-left :  groove 0.9em #B9121B;
 
   margin-top : 1.2em;
 
@@ -128,7 +128,7 @@ html>body #contenu{
 
 ul#menuList{
 
-    list-style:none;
+    list-style:blink;
 
     margin:0px;
 
@@ -146,7 +146,7 @@ ul#menuList{
 
 ul#menuList li {
 
-    position:relative;
+    position:static;
 
     margin:0px;
 
@@ -160,11 +160,11 @@ ul#menuList li {
 
 ul#menuList a {
 
-    color:rgb(0,85,227);
+    color:rgb(153, 153, 153);
 
     display:block;
 
-    text-decoration:none;
+    text-decoration:inherit;
 
     width:100%;
 
@@ -172,7 +172,7 @@ ul#menuList a {
 
 ul#menuList a:hover {
 
-    background: rgb(0,85,227);
+    background:#B4AF91;
 
     color: white;
 
@@ -312,7 +312,7 @@ form {
 
 input, button, textarea, select{
 
-  font-family:"Trebuchet MS", sans-serif;
+  font-family:"Cursive", sans-serif;
 
   font-size : 1em;
 
@@ -346,11 +346,11 @@ taille de caractères légèrement supérieure à la normale */
 
 .erreur{ 
 
-   background-color:rgb(237,210,229);
+   background-color:#40A454;
 
-   color:rgb(203,28,128);
+   color:#B9121B);
 
-   font-size:1.1em;
+   font-size:1.4em;
 
    width:95%;
 
@@ -560,19 +560,19 @@ table.listeLegere th.libelle{
 
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 
-	font-size: 14px;
+	font-size: 16px;
 
 	font-weight: bold;
 
-	color: #1D2941;
+	color: #EDF7F2;
 
 	text-decoration: none;
 
-	border : 1px solid #6988BE;
+	border : 1px solid #046380;
 
 	padding-left: 25px;
 
-	background-color: #E9F1FE;
+	background-color: #B4AF91;
 
   height : 28px;
 
@@ -582,7 +582,7 @@ table.listeLegere th.libelle{
 
 #contenu img {
 
-  height : 28px;
+  height : 42px;
 
   float : left;
 
