@@ -12,7 +12,7 @@ body{
 
   padding : 0.6em;
 
-  font-family:"Trebuchet MS",Verdana,Geneva,Arial,Helvetica,sans-serif;
+  font-family:cursive,sans-serif;
 
   font-size:0.8em;
 
@@ -52,7 +52,7 @@ body{
 
   clear : both;
 
-	border : solid 0.2em #980101;
+	border : solid 0.2em #EFECCA;
 
 	margin-left : 18%;
 
@@ -184,9 +184,9 @@ ul#menuList a:hover {
 
   float : left;
 
-  width : 238px;
+  width : 228px;
 
-  height : 152px;
+  height : 142px;
 
 }
 
@@ -248,11 +248,11 @@ ul#menuList a:hover {
 
 .corpsForm {
 
-  border : solid 0.1em #000;
+  border : solid 0.1em #C03000;
 
-  border-bottom-width:1px;
+  border-bottom-width:4px;
 
-  margin-bottom : 0em;
+  margin-bottom : 2em;
 
   width : 95%;
 
@@ -260,17 +260,17 @@ ul#menuList a:hover {
 
 .piedForm {
 
-  border-bottom-width : 0.1em;
+  border-bottom-width : 0.5em;
 
-  border-left-width : 0.1em;
+  border-left-width : 0.5em;
 
-  border-right-width : 0.1em;
+  border-right-width : 0.5em;
 
-  border-top-width : 0em;
+  border-top-width : 1em;
 
   border-style : solid;
 
-  border-color : #000;
+  border-color : #C03000;
 
   text-align:right ;
 
@@ -456,7 +456,7 @@ taille de caractères légèrement supérieure à la normale */
 
 #contenu th {  
 
-   background-color:#77AADD;
+   background-color:#A7A37E;
 
    height:21px;
 
@@ -534,7 +534,7 @@ table.listeLegere td {
 
 table.listeLegere th.eltForfait{
 
-  color:black;
+  color:white;
 
 }
 
@@ -542,7 +542,7 @@ table.listeLegere th.date, table.listeLegere th.montant{
 
   width:15%;
 
-  color:black;
+  color:white;
 
 }
 
@@ -550,7 +550,7 @@ table.listeLegere th.libelle{
 
   width:70%;
 
-  color:black;
+  color:white;
 
 }
 
@@ -558,7 +558,7 @@ table.listeLegere th.libelle{
 
 #contenu h2 {
 
-	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-family: cursive, sans-serif;
 
 	font-size: 16px;
 
