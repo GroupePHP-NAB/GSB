@@ -1,6 +1,6 @@
 
 
-  <form method="POST"  action="index.php?uc=modifierImmat&action=changerImmat">
+  <form method="POST"  action="index.php?uc=modifierImmat&action=nouvelleImmat">
 
       <div class="corpsForm">
 
@@ -13,13 +13,13 @@
             </legend>
 
             <div>
-            	<label> Immatriculation(s) précédente(s) :</label> <?php 
-            	echo $tabImmat;
-            	foreach ($tabImmat as $immat) {
-            		echo $immat[0]." pour le mois ".$immat[1]."<BR/>";
-            	}?><BR/>
+            	 Immatriculation précédente :<?php     
+                                   	
+            	               
+                echo $tabImmat[0]." enregistrer pendant le mois ".$tabImmat[1]; ?>                   		
+            	<BR/>
 
-            	<label> Prénom :</label><input type="text" name="Prenom"/><BR/>
+            	<label> Nouvelle Immatriculation :</label><input type="text" name="Immat"/><BR/>
             	
             </div>
 

@@ -1,0 +1,20 @@
+A MONTER SUR LA BASE DE DONNEES :
+
+
+
+INSERT INTO `my_bonnardjeremy`.`AffectationVehicule` (`idVisiteur`, `mois`, `immat`) VALUES ('a17','03','ImmatMars');
+INSERT INTO `my_bonnardjeremy`.`AffectationVehicule` (`idVisiteur`, `mois`, `immat`) VALUES ('a17','04','ImmatAvril');
+INSERT INTO `my_bonnardjeremy`.`AffectationVehicule` (`idVisiteur`, `mois`, `immat`) VALUES ('a17','05','ImmatMai');
+INSERT INTO `my_bonnardjeremy`.`AffectationVehicule` (`idVisiteur`, `mois`, `immat`) VALUES ('a17','06','ImmatJuin');
+INSERT INTO `my_bonnardjeremy`.`AffectationVehicule` (`idVisiteur`, `mois`, `immat`) VALUES ('a17','07','ImmatJuillet');
+INSERT INTO `my_bonnardjeremy`.`AffectationVehicule` (`idVisiteur`, `mois`, `immat`) VALUES ('a17', '08','ImmatAoût');
+INSERT INTO `my_bonnardjeremy`.`AffectationVehicule` (`idVisiteur`, `mois`, `immat`) VALUES ('a17','09','ImmatSeptembre');
+
+
+INSERT INTO `my_abdelarejdal`.`AffectationVehicule` (`idVisiteur`, `mois`, `immat`) VALUES ('a17','03','ImmatMars');
+INSERT INTO `my_abdelarejdal`.`AffectationVehicule` (`idVisiteur`, `mois`, `immat`) VALUES ('a17','04','ImmatAvril');
+INSERT INTO `my_abdelarejdal`.`AffectationVehicule` (`idVisiteur`, `mois`, `immat`) VALUES ('a17','05','ImmatMai');
+INSERT INTO `my_abdelarejdal`.`AffectationVehicule` (`idVisiteur`, `mois`, `immat`) VALUES ('a17','06','ImmatJuin');
+INSERT INTO `my_abdelarejdal`.`AffectationVehicule` (`idVisiteur`, `mois`, `immat`) VALUES ('a17','07','ImmatJuillet');
+INSERT INTO `my_abdelarejdal`.`AffectationVehicule` (`idVisiteur`, `mois`, `immat`) VALUES ('a17', '08','ImmatAoût');
+INSERT INTO `my_abdelarejdal`.`AffectationVehicule` (`idVisiteur`, `mois`, `immat`) VALUES ('a17','09','ImmatSeptembre');

@@ -8,7 +8,7 @@ switch($action){
 	}
 	case 'changerImmat':{
 		$nom= $_POST['Nom'];
-		$prenom=$_POST['Prenom'];			
+		$prenom=$_POST['Prenom'];
 		$idVisiteur=$pdo->verifExistanceVisiteur($nom,$prenom);			
 		if(is_null($idVisiteur)){
 			ajouterErreur("Le visiteur n'existe pas");
@@ -17,11 +17,17 @@ switch($action){
 			break;
 		}
 		else{
+			$tabImmat= $pdo->recupererImmat($idVisiteur);
 			include("vues/v_choixVisiteur.php");
-			include("vues/v_changeImmat.php");
-			$immat =$_POST['Immat'];
-			$action ='changerImmat';
-		}			
-	}	
+			include("vues/v_changeImmat.php");						
+		}
+		break;
+	}
+	case 'nouvelleImmat':{
+		$immat=$_POST['Immat'];
+		$pdo->majImmat($idVisiteur,$immat);
+		header("Refresh:3;URL='index.php?uc=modifierImmat&action=modifierimmat'");
+
+	}					
 }
 ?>
