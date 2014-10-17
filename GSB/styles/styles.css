@@ -58,7 +58,7 @@ body{
 
 	margin-top : 1em;
 
-	padding:0.4em;
+	padding:0.2em;
 
 	padding: 0.2em;
 
@@ -260,13 +260,13 @@ ul#menuList a:hover {
 
 .piedForm {
 
-  border-bottom-width : 0.5em;
+  border-bottom-width : 0.2em;
 
-  border-left-width : 0.5em;
+  border-left-width : 0.2em;
 
-  border-right-width : 0.5em;
+  border-right-width : 0.2em;
 
-  border-top-width : 1em;
+  border-top-width : 0.2em;
 
   border-style : solid;
 
@@ -304,7 +304,7 @@ form {
 
 	margin: 0;
 
-	padding: 0 .5em 0 0;
+	padding: 0.5em 0 0;
 
 	line-height: 1.8;	
 
@@ -312,7 +312,7 @@ form {
 
 input, button, textarea, select{
 
-  font-family:"Cursive", sans-serif;
+  font-family:"Cursive";
 
   font-size : 1em;
 
@@ -325,6 +325,8 @@ button{
   height : 30px;
 
   text-align:center;
+ 
+  position: relative;
 
   vertical-align:middle;
 
@@ -392,7 +394,7 @@ taille de caractères légèrement supérieure à la normale */
 
   width:80%;
 
-  font-size:1.2em;
+  font-size:1.1em;
 
 }
 
