@@ -26,6 +26,7 @@ switch($action){
 		$libEtat = $lesInfosFicheFrais['libEtat'];
 		$montantValide = $lesInfosFicheFrais['montantValide'];
 		$nbJustificatifs = $lesInfosFicheFrais['nbJustificatifs'];
+		$immat = $lesInfosFicheFrais['immat'];
 		$dateModif =  $lesInfosFicheFrais['dateModif'];
 		$dateModif =  dateAnglaisVersFrancais($dateModif);
 		include("vues/v_etatFrais.php");

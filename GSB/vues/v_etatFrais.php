@@ -3,6 +3,7 @@
     </h3>
     <div class="encadre">
     <p>
+        Immatriculation : <?php echo $immat?> <br/>
         Etat : <?php echo $libEtat?> depuis le <?php echo $dateModif?> <br> Montant validé : <?php echo $montantValide?>
               
                      

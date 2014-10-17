@@ -282,7 +282,7 @@ ORDER BY AffectationVehicule.mois Desc";
 */	
 	public function getLesInfosFicheFrais($idVisiteur,$mois){
 		$req = "select FicheFrais.idEtat as idEtat, FicheFrais.dateModif as dateModif, FicheFrais.nbJustificatifs as nbJustificatifs, 
-			FicheFrais.montantValide as montantValide, Etat.libelle as libEtat from  FicheFrais inner join Etat on FicheFrais.idEtat = Etat.id 
+			FicheFrais.montantValide as montantValide, Etat.libelle as libEtat, FicheFrais.immat as immat from  FicheFrais inner join Etat on FicheFrais.idEtat = Etat.id 
 			where FicheFrais.idVisiteur ='$idVisiteur' and FicheFrais.mois = '$mois'";
 		$res = PdoGsb::$monPdo->query($req);
 		$laLigne = $res->fetch();
