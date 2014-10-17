@@ -204,16 +204,17 @@ ORDER BY AffectationVehicule.mois Desc";
  * avec un idEtat à 'CR' et crée les lignes de frais forfait de quantités nulles 
  * @param $idVisiteur 
  * @param $mois sous la forme aaaamm
+ * @param $immat l'immatriculation
 */
-	public function creeNouvellesLignesFrais($idVisiteur,$mois){
+	public function creeNouvellesLignesFrais($idVisiteur,$mois,$immat){
 		$dernierMois = $this->dernierMoisSaisi($idVisiteur);
 		$laDerniereFiche = $this->getLesInfosFicheFrais($idVisiteur,$dernierMois);
 		if($laDerniereFiche['idEtat']=='CR'){
 				$this->majEtatFicheFrais($idVisiteur, $dernierMois,'CL');
 				
 		}
-		$req = "insert into FicheFrais(idVisiteur,mois,nbJustificatifs,montantValide,dateModif,idEtat) 
-		values('$idVisiteur','$mois',0,0,now(),'CR')";
+		$req = "insert into FicheFrais(idVisiteur,mois,nbJustificatifs,montantValide,dateModif,idEtat, immat) 
+		values('$idVisiteur','$mois',0,0,now(),'CR','$immat')";
 		PdoGsb::$monPdo->exec($req);
 		$lesIdFrais = $this->getLesIdFrais();
 		foreach($lesIdFrais as $uneLigneIdFrais){
