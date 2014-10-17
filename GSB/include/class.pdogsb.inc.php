@@ -313,10 +313,10 @@ ORDER BY AffectationVehicule.mois Desc";
 	public function majImmat($idVisiteur,$immat){
 
 		$mois=date(m);
-		$reqtest ="SELECT count(*) From AffectationVehicule Where idVisiteur='$idVisiteur' and mois='$mois'";
+		$reqtest ="SELECT * From AffectationVehicule Where idVisiteur='$idVisiteur' and mois='$mois'";
 		$res = PdoGsb::$monPdo->query($reqtest);
 		$laLigne = $res->fetch();
-		if($laLigne[0]==0){
+		if($laLigne[0]==null){
 			$req= "INSERT INTO AffectationVehicule(idVisiteur,mois,immat) VALUES ('$idVisiteur','$mois','$immat')";
 			PdoGsb::$monPdo->exec($req);
 			echo "Ajout de l'immatriculation ".$immat;			
